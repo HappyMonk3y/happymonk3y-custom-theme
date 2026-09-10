@@ -1,7 +1,7 @@
 /**
  * @name happymonk3y custom
  * @author happymonk3y
- * @version 2.4.0
+ * @version 2.5.0
  * @description ClearVision with a high-resolution starry sky wallpaper. Made by happymonk3y.
  */
 /* Based on ClearVision v7, ClearVision Team, Apache-2.0.
@@ -104,4 +104,50 @@ nav[class*="guilds_"] [class*="scroller_"],
 .user-profile-sidebar::before,
 .user-profile-sidebar-redesign::before {
  display: none !important;
+}
+
+/* Vencord SpotifyControls: translucent player with matching accents. */
+#vc-spotify-player {
+ background: linear-gradient(120deg, rgba(39,20,70,.65), rgba(43,19,49,.50)) !important;
+ border: 1px solid rgba(206,162,255,.20) !important;
+ border-radius: 12px !important;
+ box-shadow: inset 0 1px 0 rgba(255,255,255,.05) !important;
+ backdrop-filter: blur(12px);
+ --vc-spotify-green: #e9a4ef;
+ --vc-spotify-green-90: rgba(185,138,255,.14);
+ --vc-spotify-green-80: rgba(237,143,196,.24);
+}
+#vc-spotify-album-image {
+ border-radius: 7px !important;
+ box-shadow: 0 3px 12px rgba(0,0,0,.25);
+}
+#vc-spotify-song-title { color: #f6eeff !important; text-shadow: none !important; }
+#vc-spotify-player .vc-spotify-artist,
+#vc-spotify-player .vc-spotify-album,
+#vc-spotify-player .vc-spotify-progress-time { color: #cfbfdc !important; }
+#vc-spotify-player .vc-spotify-button {
+ color: #e2d0f4;
+ border-radius: 8px;
+ transition: background-color .15s, color .15s;
+}
+#vc-spotify-player .vc-spotify-button:hover {
+ background-color: rgba(210,151,240,.17);
+ color: #fff0fc;
+}
+#vc-spotify-progress-bar > [class*="slider"] [class*="bar"] {
+ background: rgba(211,181,244,.14) !important;
+ border-radius: 8px;
+}
+#vc-spotify-progress-bar > [class*="slider"] [class*="barFill"],
+#vc-spotify-progress-bar > [class*="slider"]:hover [class*="barFill"] {
+ background: linear-gradient(90deg, #ad7af5, #f397cf) !important;
+}
+#vc-spotify-progress-bar > [class*="slider"] [class*="grabber"] {
+ background: #f5dcff !important;
+ border-color: #cf9df5 !important;
+ box-shadow: 0 0 6px rgba(199,140,255,.3) !important;
+}
+#vc-spotify-player .vc-spotify-button:focus-visible {
+ outline: 2px solid #e9b8ff;
+ outline-offset: 2px;
 }
