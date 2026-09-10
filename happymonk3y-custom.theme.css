@@ -1,7 +1,7 @@
 /**
  * @name happymonk3y custom
  * @author happymonk3y
- * @version 2.3.0
+ * @version 2.4.0
  * @description ClearVision with a high-resolution starry sky wallpaper. Made by happymonk3y.
  */
 /* Based on ClearVision v7, ClearVision Team, Apache-2.0.
@@ -63,3 +63,45 @@ nav[class*="guilds_"] [class*="scroller_"],
  background-size: cover !important;
 }
 
+
+/* Subtle inline mentions: no bright solid badge or extra glow. */
+.wrapper_f61d60, .mention {
+ background: rgba(185, 138, 255, .14) !important;
+ color: #dec8ff !important;
+ border-radius: 3px !important;
+ padding: 0 2px !important;
+ font-weight: 500 !important;
+ text-shadow: none !important;
+ box-shadow: none !important;
+ filter: none !important;
+}
+.wrapper_f61d60:hover, .mention:hover {
+ background: rgba(185, 138, 255, .26) !important;
+ color: #f4eaff !important;
+}
+
+/* Transparent right-hand profile, including custom profile themes.
+   Keep the avatar, banner, text and controls visible. */
+.user-profile-sidebar, .user-profile-sidebar-redesign,
+.outer_c0bea0.user-profile-sidebar-redesign,
+.user-profile-sidebar .inner_c0bea0,
+.user-profile-sidebar-redesign .inner_c0bea0,
+.user-profile-sidebar .overlay_c0bea0,
+.user-profile-sidebar-redesign .overlay_c0bea0,
+.user-profile-sidebar-redesign .outer_ab8609,
+.user-profile-sidebar-redesign .inner_ab8609 {
+ background: transparent !important;
+ background-color: transparent !important;
+ box-shadow: none !important;
+ backdrop-filter: none !important;
+ --profile-gradient-primary-color: transparent;
+ --profile-gradient-secondary-color: transparent;
+ --profile-body-background-color: transparent;
+ --profile-body-background-hover: rgba(255,255,255,.06);
+ --profile-gradient-overlay-color: transparent;
+ --profile-gradient-button-color: rgba(185,138,255,.18);
+}
+.user-profile-sidebar::before,
+.user-profile-sidebar-redesign::before {
+ display: none !important;
+}
