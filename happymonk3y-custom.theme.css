@@ -1,7 +1,7 @@
 /**
  * @name happymonk3y custom
  * @author happymonk3y
- * @version 2.7.0
+ * @version 2.8.0
  * @description ClearVision with a high-resolution starry sky wallpaper. Made by happymonk3y.
  */
 /* Based on ClearVision v7, ClearVision Team, Apache-2.0.
@@ -253,4 +253,38 @@ nav[class*="guilds_"] [class*="scroller_"],
 :is(.soundButton__9be63,.soundButtonRefresh__9be63):disabled { opacity: .45; }
 @media (prefers-reduced-motion: reduce) {
  :is(.soundButton__9be63,.soundButtonRefresh__9be63) { transition: none !important; }
+}
+
+/* Screen-share viewer: solid cinema surface instead of wallpaper gaps. */
+.callContainer_cb9592:has(video),
+.root_bfe55a:has(video),
+.wrapper_cb9592:has(video) {
+ background: #080b14 !important;
+ --background-primary: #080b14;
+ --background-secondary: #101421;
+ --text-normal: #f0eff8;
+ --text-default: #f0eff8;
+ --text-muted: #b6b8ca;
+ --interactive-normal: #d9d9e8;
+ --interactive-icon-default: #d9d9e8;
+}
+:is(.callContainer_cb9592,.root_bfe55a) video {
+ object-fit: contain !important;
+ background: #05070d !important;
+ filter: none !important;
+ opacity: 1 !important;
+ border-radius: 8px;
+}
+:is(.callContainer_cb9592,.root_bfe55a):has(video) [class*="videoWrapper"] {
+ background: #05070d !important;
+ box-shadow: none !important;
+}
+:is(.callContainer_cb9592,.root_bfe55a):has(video) [class*="header"] {
+ --text-default: #f0eff8;
+ --text-muted: #b6b8ca;
+ --interactive-icon-default: #d9d9e8;
+}
+:is(.callContainer_cb9592,.root_bfe55a):has(video) .buttonSection__1405b {
+ background: rgba(22,24,40,.96) !important;
+ backdrop-filter: none;
 }
