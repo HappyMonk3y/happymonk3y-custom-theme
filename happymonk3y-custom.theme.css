@@ -1,7 +1,7 @@
 /**
  * @name happymonk3y custom
  * @author happymonk3y
- * @version 2.6.0
+ * @version 2.7.0
  * @description ClearVision with a high-resolution starry sky wallpaper. Made by happymonk3y.
  */
 /* Based on ClearVision v7, ClearVision Team, Apache-2.0.
@@ -216,4 +216,41 @@ nav[class*="guilds_"] [class*="scroller_"],
 .button_e131a9:disabled { opacity: .45; }
 @media (prefers-reduced-motion: reduce) {
  .button_e131a9, .buttonSection__1405b button, .colorable_f1ceac { transition: none !important; }
+}
+
+/* Soundboard favourites, frequently used, and server sound sections. */
+.sectionContainer__61424 {
+ background: linear-gradient(100deg, rgba(172,116,240,.16), rgba(226,123,182,.06)) !important;
+ border: 1px solid rgba(207,171,250,.14) !important;
+ border-radius: 10px !important;
+ box-shadow: none !important;
+ color: #e6d5f7 !important;
+}
+.sectionContainer__61424 :is(h2,h3,button,[role="button"]) {
+ color: #e6d5f7 !important;
+ text-shadow: none !important;
+}
+.soundButtonWrapper__9be63 { background: transparent !important; }
+:is(.soundButton__9be63,.soundButtonRefresh__9be63) {
+ background: var(--hm-control-surface) !important;
+ border: 1px solid rgba(208,176,255,.16) !important;
+ border-radius: 12px !important;
+ color: #f0e7fa !important;
+ box-shadow: inset 0 1px 0 rgba(255,255,255,.04) !important;
+ transition: background .15s, border-color .15s;
+}
+:is(.soundButton__9be63,.soundButtonRefresh__9be63):is(:hover,:focus-within,.focused__9be63) {
+ background: var(--hm-control-hover) !important;
+ border-color: rgba(224,176,255,.48) !important;
+}
+:is(.soundButton__9be63,.soundButtonRefresh__9be63):active {
+ background: linear-gradient(120deg, rgba(137,80,209,.60), rgba(185,77,137,.45)) !important;
+}
+:is(.soundButton__9be63,.soundButtonRefresh__9be63):focus-visible {
+ outline: 2px solid #e2b4ff !important;
+ outline-offset: 2px;
+}
+:is(.soundButton__9be63,.soundButtonRefresh__9be63):disabled { opacity: .45; }
+@media (prefers-reduced-motion: reduce) {
+ :is(.soundButton__9be63,.soundButtonRefresh__9be63) { transition: none !important; }
 }
