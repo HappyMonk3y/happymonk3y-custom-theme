@@ -1,7 +1,7 @@
 /**
  * @name happymonk3y custom
  * @author happymonk3y
- * @version 2.5.0
+ * @version 2.6.0
  * @description ClearVision with a high-resolution starry sky wallpaper. Made by happymonk3y.
  */
 /* Based on ClearVision v7, ClearVision Team, Apache-2.0.
@@ -150,4 +150,70 @@ nav[class*="guilds_"] [class*="scroller_"],
 #vc-spotify-player .vc-spotify-button:focus-visible {
  outline: 2px solid #e9b8ff;
  outline-offset: 2px;
+}
+
+/* Call controls: rounded glass groups and restrained accent states. */
+:root {
+ --hm-control-surface: linear-gradient(135deg, rgba(35,27,63,.84), rgba(15,19,39,.88));
+ --hm-control-hover: linear-gradient(120deg, rgba(139,91,211,.42), rgba(190,92,148,.30));
+ --hm-control-border: rgba(208,176,255,.20);
+}
+.buttonSection__1405b {
+ background: var(--hm-control-surface) !important;
+ border: 1px solid var(--hm-control-border) !important;
+ border-radius: 16px !important;
+ box-shadow: 0 6px 20px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.04) !important;
+ backdrop-filter: blur(14px);
+}
+.buttonSection__1405b button,
+.buttonSection__1405b [role="button"] {
+ border-radius: 12px !important;
+ transition: background-color .15s, box-shadow .15s;
+}
+.buttonSection__1405b button:hover,
+.buttonSection__1405b [role="button"]:hover {
+ background: var(--hm-control-hover) !important;
+}
+.colorable_f1ceac:not(.disconnect_f1ceac) {
+ border-radius: 14px !important;
+ box-shadow: none !important;
+}
+.colorable_f1ceac.disconnect_f1ceac {
+ background: linear-gradient(135deg, #b83c5a, #902740) !important;
+ border: 1px solid rgba(255,167,187,.32) !important;
+ border-radius: 16px !important;
+ box-shadow: 0 5px 16px rgba(86,10,32,.25) !important;
+ transition: filter .15s;
+}
+.colorable_f1ceac.disconnect_f1ceac:hover { filter: brightness(1.18); }
+
+/* Matching controls below the voice connection in the left sidebar. */
+:is(.theme-light,.theme-dark) .button_e131a9.buttonColor_e131a9 {
+ background: var(--hm-control-surface) !important;
+ border: 1px solid var(--hm-control-border) !important;
+ border-radius: 11px !important;
+ color: #eadefa !important;
+ box-shadow: inset 0 1px 0 rgba(255,255,255,.04) !important;
+ min-height: 34px;
+ transition: background .15s, border-color .15s;
+}
+:is(.theme-light,.theme-dark) .button_e131a9.buttonColor_e131a9:hover {
+ background: var(--hm-control-hover) !important;
+ border-color: rgba(222,180,255,.4) !important;
+ color: #fff !important;
+}
+:is(.theme-light,.theme-dark) .button_e131a9.buttonColor_e131a9.buttonActive_e131a9 {
+ background: linear-gradient(120deg, rgba(128,77,205,.65), rgba(184,73,137,.50)) !important;
+ border-color: rgba(231,177,255,.55) !important;
+ color: #fff !important;
+}
+.button_e131a9:focus-visible,
+.buttonSection__1405b button:focus-visible,
+.colorable_f1ceac:focus-visible {
+ outline: 2px solid #e2b4ff !important;
+ outline-offset: 2px;
+}
+.button_e131a9:disabled { opacity: .45; }
+@media (prefers-reduced-motion: reduce) {
+ .button_e131a9, .buttonSection__1405b button, .colorable_f1ceac { transition: none !important; }
 }
